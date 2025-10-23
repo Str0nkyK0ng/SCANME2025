@@ -5,7 +5,7 @@
   @font-face {
     font-family: 'Fluxisch Else';
     src: local('Fluxisch Else'), local('FluxischElse'),
-      url('fonts/fluxisch-else/FluxischElse-Regular.otf') format('opentype');
+      url('/fonts/fluxisch-else/FluxischElse-Regular.otf') format('opentype');
     font-weight: 400;
     font-style: normal;
     font-display: swap;
@@ -14,7 +14,7 @@
   @font-face {
     font-family: 'Fluxisch Else';
     src: local('Fluxisch Else Bold'), local('FluxischElse-Bold'),
-      url('fonts/fluxisch-else/FluxischElse-Bold.otf') format('opentype');
+      url('/fonts/fluxisch-else/FluxischElse-Bold.otf') format('opentype');
     font-weight: 700;
     font-style: normal;
     font-display: swap;
