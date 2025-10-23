@@ -1,41 +1,67 @@
-// get the nameHeader element
-const nameHeader = document.getElementById('nameHeader') as HTMLElement;
+// scanline overlay: create animated black-looking scan lines that invert content below them
+function createScanlines({
+  stripeHeight = 10, // px
+  gap = 10, // px between stripes
+  duration = 1600, // ms for one cycle
+  zIndex = 100, // requested z-100
+} = {}) {
+  // remove existing if re-run
+  const existing = document.querySelector('.scanlines-overlay');
+  if (existing) existing.remove();
 
-const beginningHeader = 'SOUTHERN CALIFORNIA NEW MEDIA EXHBITION';
-const endingHeader = 'SCANME';
-const totalAnimationDuration = 2000; // total duration in milliseconds
-// function to animate the nameHeader text
-function animateNameHeader() {
-  console.log('Animating name header');
-  if (!nameHeader) return;
-  const current = beginningHeader.split('');
-  const target = endingHeader.split('');
-  const maxLen = Math.max(current.length, target.length);
-  const diffIndices: number[] = [];
-  for (let i = 0; i < maxLen; i++) {
-    const cur = current[i] ?? '';
-    const tar = target[i] ?? '';
-    if (cur !== tar) diffIndices.push(i);
-  }
-  if (diffIndices.length === 0) {
-    nameHeader.textContent = endingHeader;
-    return;
-  }
-  const interval = Math.max(
-    1,
-    Math.floor(totalAnimationDuration / diffIndices.length)
-  );
-  let step = 0;
-  const timer = setInterval(() => {
-    const idx = diffIndices[step++];
-    current[idx] = target[idx] ?? '';
-    nameHeader.textContent = current.join('');
-    if (step >= diffIndices.length) {
-      clearInterval(timer);
-      nameHeader.textContent = endingHeader;
-    }
-  }, interval);
+  const style = document.createElement('style');
+  const stripeTotal = stripeHeight + gap;
+  style.textContent = `
+.scanlines-overlay {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: ${zIndex};
+    /* repeating stripes: white strips will use mix-blend-mode: difference to invert underlying colors */
+    background-image: repeating-linear-gradient(
+        to bottom,
+        rgba(255,255,255,0.95) 0 ${stripeHeight}px,
+        rgba(255,255,255,0) ${stripeHeight}px ${stripeTotal}px
+    );
+    mix-blend-mode: difference;
+    /* make the overlay itself mostly transparent so only the stripe effect shows */
+    opacity: 1;
+    will-change: background-position;
+    animation: scanlines-slide ${duration}ms linear infinite;
+    -webkit-tap-highlight-color: transparent;
+}
+/* fallback for browsers preferring backdrop-filter (optional) */
+.scanlines-overlay.backdrop-invert {
+    background-image: repeating-linear-gradient(
+        to bottom,
+        rgba(0,0,0,0.9) 0 ${stripeHeight}px,
+        rgba(0,0,0,0) ${stripeHeight}px ${stripeTotal}px
+    );
+    backdrop-filter: invert(1);
+    -webkit-backdrop-filter: invert(1);
+    mix-blend-mode: normal;
 }
 
-// call the function to start the animation
-animateNameHeader();
+@keyframes scanlines-slide {
+    from { background-position: 0 0; }
+    to   { background-position: 0 ${stripeTotal}px; }
+}
+`;
+  document.head.appendChild(style);
+
+  const overlay = document.createElement('div');
+  overlay.className = 'scanlines-overlay';
+  // If you'd rather use backdrop-filter inversion (may look different / has limited support),
+  // toggle the class 'backdrop-invert' on overlay instead of the default mix-blend-mode approach.
+  // overlay.classList.add('backdrop-invert');
+
+  document.body.appendChild(overlay);
+}
+
+// call to start scanlines
+createScanlines({
+  stripeHeight: 8,
+  gap: 12,
+  duration: 1400,
+  zIndex: 100, // z-100 as requested
+});
