@@ -8,7 +8,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        monomaniac: ['Oxygen Mono', 'monospace'],
+        fluxisch: ['Fluxisch Else', 'monospace'],
       },
       extend: {
         keyframes: {
