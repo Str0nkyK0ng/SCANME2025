@@ -1,5 +1,6 @@
 @tailwind base;
 @tailwind components;
+@tailwind utilities;
 
 @layer base {
   @font-face {
@@ -18,5 +19,3 @@
     font-display: swap;
   }
 }
-
-@tailwind utilities;
