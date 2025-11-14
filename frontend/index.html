@@ -11,7 +11,9 @@
     <div class="leading-tight flex flex-col uppercase text-center items-center h-[100svh]  w-full  justify-center">
       <canvas id="backgroundCanvas" class=" absolute inset-0 h-full w-full -z-10 "></canvas>
       <!-- <script type="module" src="/nameAnim.ts"></script> -->
-          <img id="tripWire" src="TRIP-WIRE-HEADER.png" class="h-auto w-[1/4] lg:w-full absolute lg:-top-20 top-0"/>
+          <img id="tripWire" src="TRIP-WIRE-HEADER.png" class="h-auto w-[1/4] sm:w-full absolute -top-20 sm:-top-0 sm:block hidden"/>
+          <img id="tripWire" src="MOBILE.png" class="absolute sm:hidden block h-auto w-[1/4] lg:w-full top-[clamp(-400px,calc(-1*(600px-100vh)),-50px)]" />
+
 
       <div class="lg:space-y-20 lg:mt-52">
         <div class="flex flex-col lg:space-y-8">
