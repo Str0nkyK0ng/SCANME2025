@@ -14,6 +14,17 @@ export default {
   },
   plugins: [
     require('@tailwindcss/typography'),
+    function ({ addUtilities }) {
+      const newUtilities = {
+        '.text-stroke-mobile': {
+          '-webkit-text-stroke-width': '0.03rem',
+        },
+        '.text-stroke-pc': {
+          '-webkit-text-stroke-width': '0.05rem',
+        },
+      };
+      addUtilities(newUtilities, ['responsive']);
+    },
     // ...
   ],
 };

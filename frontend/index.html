@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
   <body class="text-[#000000] overflow-x-hidden stroke-[0.5rem] font-bold font-fluxisch bg-[#ffffff] p-0">
-    <div id="header" class="leading-tight flex flex-col  uppercase text-center items-center h-[100svh]  w-full  justify-center">
+    <div id="header" class="leading-tight flex flex-col  uppercase text-center items-center h-[100svh]  w-full  justify-center text-stroke-mobile lg:text-stroke-pc">
       <canvas id="backgroundCanvas" class=" absolute inset-0 h-full w-full -z-10 "></canvas>
       <script type="module" src="/nameAnim.ts"></script>
           <img id="tripWire" src="TRIP-WIRE-HEADER.png" class="h-auto w-[1/4] sm:w-full absolute -top-20 sm:-top-0 sm:block hidden"/>
@@ -47,7 +47,7 @@
       class="leading-tight text-white text-center  bg-black items-center h-min w-full "
     >
     <div class="flex-col flex text-left justify-center w-full items-center -space-y-5">
-      <div class="text-white text-[0.75rem] lg:text-[1rem] w-2/3 mt-10 lg:w-[43%] whitespace-pre-line leading-relaxed -space-y-5 lg:mx-20">
+      <div class="text-white  text-[0.75rem] lg:text-[1rem] w-[66%] mt-10 lg:w-[43%] whitespace-pre-line leading-relaxed -space-y-5 lg:mx-20">
         <p>
           <span class="text-[2rem]">TRIPWIRE</span> interrogates the intertwined systems of capital, power, and culture. Through sculpture, image, and games, artists employ tactics—dismantling, provoking, or evading—to reveal the underlying structures that sustain them.
         </p>
@@ -70,9 +70,8 @@
           That is why we voluntarily walk into traps. That is why when we lie down to sleep at night, we stretch our hands to reach for the traps there, too.
         </p>
       </div>
-      <h4 class="text-white text-[1rem] lg:text-[2rem] text-center w-3/4 whitespace-pre-line leading-relaxed lg:mx-20 pb-20 ">
-        'It is difficult to get the news from poems,
-        yet men die miserably every day for lack of what is found there.'
+      <h4 class="text-white text-[1rem] lg:text-[2rem] text-center w-2/3 whitespace-pre-line leading-relaxed lg:mx-20 pb-20 ">
+        'It is difficult to get the news from poems, yet men die miserably every day for lack of what is found there.'
       —William Carlos Williams
       </h4>
     </div>
@@ -80,13 +79,15 @@
       </div>
 
       </div>
-          <div
-      class="leading-tight text-base text-black my-20 text-center  bg-white items-center h-[50svh] justify-center"
+      <div
+      class="leading-tight text-base text-black mt-20 mb-[8rem] text-center  bg-white items-center h-[50svh] justify-center"
     >
-    <h2  id="namesGrid" class=" uppercase  text-[2.5rem] pb-[30px]">Curated By</h2>
+    <h2  id="namesGrid" class=" uppercase  text-[2.5rem] pb-[30px] text-stroke-mobile lg:text-stroke-pc">Curated By</h2>
         <div
         id="namesGrid"
-      class="lg:w-full grid text-[1rem] pb-[3px] lg:text-[1.5rem] grid-cols-2 lg:grid-cols-3 uppercase space-y-0 text-center h-[100%] align-baseline justify-center items-center"
+      class="
+      text-stroke-mobile lg:text-stroke-pc
+      lg:w-full grid text-[1rem] pb-[3px] lg:text-[1.5rem] grid-cols-2 lg:grid-cols-3 uppercase space-y-0 text-center h-[100%] align-baseline justify-center items-center"
     >
         <h3 class="order-1 "><a href="https://aidanstrong.info" target="_blank" rel="noopener noreferrer">Aidan Strong</a></h3>
         <h3 class="order-2 "><a>Dhriti Goyal</a></h3>
@@ -96,44 +97,25 @@
         <h3 class="order-7 "><a>Ren Burch</a></h3>
         <h3 class="order-8 "><a href="https://alsoknownasrox.com/" target="_blank" rel="noopener noreferrer">Roxanne Harris</a></h3>
         <h3 class="order-9 "><a href="https://www.temu.com/" target="_blank" rel="noopener noreferrer">Thomas Noya</a></h3>
-        <h3 class="order-10 "><a href="https://dma.ucla.edu/people/paul-young" target="_blank" rel="noopener noreferrer">Advised by<br>Paul Young</a></h3>
+        <h3 class="order-10 col-span-2 lg:col-span-1"><a href="https://dma.ucla.edu/people/paul-young" target="_blank" rel="noopener noreferrer">Advised by<br>Paul Young</a></h3>
     </div>
       </div>
     </div>
 
-    <!-- <div       id="namesGrid" class="leading-tight text-base text-black my-20 bg-white items-center justify-center">
-      <div class="w-full flex flex-col lg:flex-row items-start lg:items-center justify-center gap-8 lg:gap-12 px-4 lg:px-20">
-        <div class="w-full lg:w-1/2 text-left">
-          <h2 class="uppercase text-2xl lg:text-3xl mb-4">Location</h2>
-          <p class="text-lg lg:text-xl font-bold">BENDIX BUILDING, 10th Floor</p>
-          <p class="text-lg lg:text-xl">1206 Maple Ave, Los Angeles</p>
-        </div>
-
-        <div class="w-full lg:w-1/2 flex justify-center">
-          <iframe
-            title="Bendix Building - 1206 Maple Ave"
-            class="w-full h-64 lg:h-80 rounded-sm border-0"
-            src="https://www.google.com/maps?q=1206+Maple+Ave+Los+Angeles&output=embed"
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-          ></iframe>
-        </div>
-      </div>
-    </div> -->
 
     
-        <div
-      class="leading-tight flex flex-col text-white bg-black text-center items-center h-[20svh] lg:h[4svh] justify-center"
+    <div
+      class="leading-tight flex flex-col text-white bg-black text-center items-center h-[15svh] lg:h-[15svh] justify-center"
     >
-    <div class="flex items-center justify-center h-[3rem] lg:h-[3rem] lg:space-x-[10rem] space-x-10 ">
+    <div class="flex items-center justify-center h-[1rem] lg:h-[3rem] lg:space-x-[10rem] space-x-10 ">
       <a href="https://dma.ucla.edu" target="_blank" rel="noopener noreferrer" class=" flex items-center cursor-pointer">
-        <img src="DMA_White.svg" alt="UCLA School of Arts Architecture" class="h-[2rem] w-auto object-contain" />
+        <img src="DMA_White.svg" alt="UCLA School of Arts Architecture" class="h-[1rem] lg:h-[2rem] w-auto object-contain" />
       </a>
       <a target="_blank" rel="noopener noreferrer" class=" flex items-center cursor-pointer">
-        <img src="scanMeLogoWhite.png" alt="Bendix Building" class="h-[2rem] w-auto object-contain" />
+        <img src="scanMeLogoWhite.png" alt="Bendix Building" class="h-[1rem] lg:h-[2rem] w-auto object-contain" />
       </a>
       <a href="https://bendixbuilding.com/" target="_blank" rel="noopener noreferrer" class=" flex items-center cursor-pointer">
-        <img src="Bendix_Official_White.webp" alt="Bendix Building" class="h-[8rem] w-auto object-contain" />
+        <img src="Bendix_Official_White.webp" alt="Bendix Building" class="h-[5rem] lg:h-[8rem] w-auto object-contain" />
       </a>
     </div>
   </div>

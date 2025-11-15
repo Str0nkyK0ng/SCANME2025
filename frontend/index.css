@@ -27,9 +27,9 @@ body {
 
 #header,
 #namesGrid {
-  -webkit-text-stroke-width: 0.05rem;
   letter-spacing: -0.2px;
 }
 
+/* -webkit-text-stroke-width: 0.03rem; */
 @tailwind utilities;
 @plugin "@tailwindcss/typography";
