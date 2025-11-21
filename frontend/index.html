@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>SCANME 2025</title>
+    <title>TRIPWIRE - SCaNME 2025</title>
     <link rel="stylesheet" href="./index.css" />
     <link rel="icon" type="image/png" href="/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,6 +11,8 @@
     <div id="header" class="leading-tight flex flex-col  uppercase text-center items-center h-[100svh]  w-full  justify-center text-stroke-mobile lg:text-stroke-pc">
       <canvas id="backgroundCanvas" class=" absolute inset-0 h-full w-full -z-10 "></canvas>
       <script type="module" src="/nameAnim.ts"></script>
+      <script type="module" src="/artistLinks.ts"></script>
+
           <img id="tripWire" src="TRIP-WIRE-HEADER.png" class="h-auto w-[1/4] sm:w-full absolute -top-20 sm:-top-0 sm:block hidden"/>
           <img id="tripWire" src="MOBILE.png" class="absolute sm:hidden block h-auto w-[1/4] lg:w-full top-[clamp(-700px,calc(100vh-700px),-100px)]" />
 
@@ -79,25 +81,42 @@
       </div>
 
       </div>
-      <div
-      class="leading-tight text-base text-black mt-20 mb-[8rem] text-center  bg-white items-center h-[50svh] justify-center"
+
+    <div
+      class="leading-tight text-base text-black  pt-[2rem] text-center  bg-white items-center h-[75svh] justify-center"
     >
-    <h2  id="namesGrid" class=" uppercase  text-[2.5rem] pb-[30px] text-stroke-mobile lg:text-stroke-pc">Curated By</h2>
+    <h2  class=" uppercase  text-black text-[2rem] lg:text-[2.5rem] pb-[30px] text-stroke-mobile lg:text-stroke-pc">FEATURING WORK <br>BY</h2>
+
+    <div
+        id="artistGrid"
+      class="
+      text-stroke-mobile lg:text-stroke-pc
+      lg:w-full grid text-[1rem] lg:text-[1.5rem] grid-cols-2 lg:grid-cols-3 uppercase space-y-0 text-center h-[75%] align-baseline justify-center items-center"
+    >
+
+    </div>
+      </div>
+
+      <div
+      class="leading-tight text-base text-white pt-[2rem]  text-center  bg-black items-center h-[75svh] justify-center"
+    >
+    <h2 class=" uppercase  text-[2.5rem] pb-[30px] text-stroke-mobile lg:text-stroke-pc">Curated By</h2>
         <div
         id="namesGrid"
       class="
       text-stroke-mobile lg:text-stroke-pc
-      lg:w-full grid text-[1rem] pb-[3px] lg:text-[1.5rem] grid-cols-2 lg:grid-cols-3 uppercase space-y-0 text-center h-[100%] align-baseline justify-center items-center"
+      lg:w-full grid text-[1rem] lg:text-[1.5rem] grid-cols-2 lg:grid-cols-3 uppercase space-y-0 text-center h-[75%] align-baseline justify-center items-center"
+
     >
-        <h3 class="order-1 "><a href="https://aidanstrong.info" target="_blank" rel="noopener noreferrer">Aidan Strong</a></h3>
-        <h3 class="order-2 "><a>Dhriti Goyal</a></h3>
-        <h3 class="order-3 "><a href="https://elliotbearyu.com/" target="_blank" rel="noopener noreferrer">Elliot Bear Yu</a></h3>
-        <h3 class="order-5 "><a>Lea Shum</a></h3>
-        <h3 class="order-6 "><a href="https://www.melodymou.com/" target="_blank" rel="noopener noreferrer">Peijing Mou</a></h3>
-        <h3 class="order-7 "><a>Ren Burch</a></h3>
-        <h3 class="order-8 "><a href="https://alsoknownasrox.com/" target="_blank" rel="noopener noreferrer">Roxanne Harris</a></h3>
-        <h3 class="order-9 "><a href="https://www.temu.com/" target="_blank" rel="noopener noreferrer">Thomas Noya</a></h3>
-        <h3 class="order-10 col-span-2 lg:col-span-1"><a href="https://dma.ucla.edu/people/paul-young" target="_blank" rel="noopener noreferrer">Advised by<br>Paul Young</a></h3>
+        <h3 class><a href="https://aidanstrong.info" target="_blank" rel="noopener noreferrer">Aidan Strong</a></h3>
+        <h3 class><a>Dhriti Goyal</a></h3>
+        <h3 class><a href="https://elliotbearyu.com/" target="_blank" rel="noopener noreferrer">Elliot Bear Yu</a></h3>
+        <h3 class><a>Lea Shum</a></h3>
+        <h3 class><a href="https://www.melodymou.com/" target="_blank" rel="noopener noreferrer">Peijing Mou</a></h3>
+        <h3 class><a>Ren Burch</a></h3>
+        <h3 class><a href="https://alsoknownasrox.com/" target="_blank" rel="noopener noreferrer">Roxanne Harris</a></h3>
+        <h3 class><a href="https://www.temu.com/" target="_blank" rel="noopener noreferrer">Thomas Noya</a></h3>
+        <h3 class="order-10 col-span-2 lg:col-span-1"><a href="https://dma.ucla.edu/people/paul-young" target="_blank" rel="noopener noreferrer"><span class="text-[.8rem]">Advised by</span> <br> Paul Young</a></h3>
     </div>
       </div>
     </div>
