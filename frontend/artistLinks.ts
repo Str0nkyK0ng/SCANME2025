@@ -9,7 +9,6 @@ const artistLinks: { name: string; url: string | null }[] = [
     url: 'https://www.instagram.com/emilygreenberg6/',
   },
   { name: 'Evan Apodaca', url: 'https://www.instagram.com/secretcity.socal/' },
-  { name: 'Johnnie Chatman', url: null },
   { name: 'Jonathan Godinez', url: null },
   { name: 'Kevin Clancy', url: null },
   { name: 'Lily Kennard', url: 'https://www.instagram.com/Lily_kennard/' },
