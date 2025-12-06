@@ -1,6 +1,7 @@
 const artistLinks: { name: string; url: string | null }[] = [
   { name: 'Camille MacRae', url: null },
   { name: 'Chris Johst', url: null },
+
   { name: 'David Kelley', url: 'https://www.instagram.com/kelley_atelier/' },
   { name: 'Devin Wilson', url: 'https://www.instagram.com/devinwilsonstudio/' },
   { name: "Emily D'Achiardi", url: 'www.sneakyfelix.com' },
@@ -13,6 +14,7 @@ const artistLinks: { name: string; url: string | null }[] = [
   { name: 'Kevin Clancy', url: null },
   { name: 'Lily Kennard', url: 'https://www.instagram.com/Lily_kennard/' },
   { name: 'MICHAEL OVERTON Brown', url: 'https://michaelovertonbrown.com/' },
+  { name: 'KC Ho', url: null },
 ];
 
 //get the artistGrid div
