@@ -4,7 +4,7 @@ const artistLinks: { name: string; url: string | null }[] = [
 
   { name: 'David Kelley', url: 'https://www.instagram.com/kelley_atelier/' },
   { name: 'Devin Wilson', url: 'https://www.instagram.com/devinwilsonstudio/' },
-  { name: "Emily D'Achiardi", url: 'www.sneakyfelix.com' },
+  { name: "Emily D'Achiardi", url: 'https://www.sneakyfelix.com' },
   {
     name: 'Emily Greenberg',
     url: 'https://www.instagram.com/emilygreenberg6/',
